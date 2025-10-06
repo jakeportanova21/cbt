@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import { useState } from 'react'
 
 function formatHour(h: number){
   const suffix = h < 12 ? 'AM' : 'PM'

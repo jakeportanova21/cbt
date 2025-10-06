@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 type Entry = { id: number; belief: string; plan: string; result?: 'success' | 'failure' }
 const STORAGE_KEY = 'testcants.entries'

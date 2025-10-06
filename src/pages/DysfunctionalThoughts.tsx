@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 type Emotions = {
   joy: number
@@ -73,10 +73,6 @@ export default function DysfunctionalThoughts(){
     setAutomaticThoughts('')
     setCognitiveDistortions([])
     setRationalResponse('')
-  }
-
-  function update(id:number, patch: Partial<Entry>){
-    setEntries(prev => prev.map(en => en.id === id ? {...en, ...patch} : en))
   }
 
   function remove(id:number){

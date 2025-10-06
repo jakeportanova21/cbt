@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 type Activity = { id: number; name: string; value: number }
 type Measurement = { id: number; title: string; activities: Activity[] }

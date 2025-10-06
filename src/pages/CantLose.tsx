@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 type Entry = { id: number; action: string; negatives: string[]; positives: string[] }
 const STORAGE_KEY = 'cantlose.entries'

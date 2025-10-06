@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 type Step = { id: number; text: string; done: boolean }
 type Goal = { id: number; time: string; title: string; steps: Step[] }
