@@ -13,6 +13,7 @@ import VisualizeSuccess from './VisualizeSuccess'
 import CountWhatCounts from './CountWhatCounts'
 import TestYourCants from './TestYourCants'
 import CantLose from './CantLose'
+import RiskReward from './RiskReward'
 
 const pages = [
   { path: '/', label: 'Dashboard', component: Dashboard },
@@ -30,6 +31,7 @@ const pages = [
   { path: '/count', label: 'Count What Counts', component: CountWhatCounts },
   { path: '/testcants', label: "Test Your Can'ts", component: TestYourCants },
   { path: '/cantlose', label: "Can't Lose System", component: CantLose },
+  { path: '/riskreward', label: 'Risk-Reward Calculation', component: RiskReward },
 ]
 
 export default pages
