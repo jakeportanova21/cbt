@@ -81,20 +81,27 @@ const DEFAULT_OPTIONS: Omit<ScoreOption, 'score' | 'weight'>[] = [
 
 export default function RiskReward() {
   const [behavior, setBehavior] = useState('')
-  const [entries, setEntries] = useState<Entry[]>(() => {
+  const [entries, setEntries] = useState<Entry[]>([])
+
+  // Load from localStorage after initial render
+  useEffect(() => {
     try {
       const raw = localStorage.getItem(STORAGE_KEY)
-      return raw ? JSON.parse(raw) as Entry[] : []
-    } catch { 
-      return [] 
+      if (raw) {
+        const parsed = JSON.parse(raw) as Entry[]
+        setEntries(parsed)
+      }
+    } catch (error) {
+      console.error('Failed to load from localStorage:', error)
     }
-  })
+  }, [])
 
+  // Save to localStorage when entries change
   useEffect(() => {
-    try { 
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(entries)) 
-    } catch {
-      // Handle localStorage errors silently
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(entries))
+    } catch (error) {
+      console.error('Failed to save to localStorage:', error)
     }
   }, [entries])
 
