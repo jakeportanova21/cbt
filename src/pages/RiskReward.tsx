@@ -79,18 +79,23 @@ const DEFAULT_OPTIONS: Omit<ScoreOption, 'score' | 'weight'>[] = [
   }
 ]
 
-export default function RiskReward(){
+export default function RiskReward() {
   const [behavior, setBehavior] = useState('')
-
   const [entries, setEntries] = useState<Entry[]>(() => {
     try {
       const raw = localStorage.getItem(STORAGE_KEY)
       return raw ? JSON.parse(raw) as Entry[] : []
-    } catch { return [] }
+    } catch { 
+      return [] 
+    }
   })
 
   useEffect(() => {
-    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(entries)) } catch {}
+    try { 
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(entries)) 
+    } catch {
+      // Handle localStorage errors silently
+    }
   }, [entries])
 
   function addEntry() {
