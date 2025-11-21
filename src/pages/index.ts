@@ -14,6 +14,7 @@ import CountWhatCounts from './CountWhatCounts'
 import TestYourCants from './TestYourCants'
 import CantLose from './CantLose'
 import RiskReward from './RiskReward'
+import RiskReward2 from './RiskReward2'
 import ProsCons from './ProsCons'
 
 const pages = [
@@ -33,6 +34,7 @@ const pages = [
   { path: '/testcants', label: "Test Your Can'ts", component: TestYourCants },
   { path: '/cantlose', label: "Can't Lose System", component: CantLose },
   { path: '/riskreward', label: 'Risk-Reward Calculation', component: RiskReward },
+  { path: '/riskreward2', label: 'Risk-Reward Calculator v2', component: RiskReward2 },
   { path: '/proscons', label: 'Pros & Cons Analysis', component: ProsCons },
 ]
 
