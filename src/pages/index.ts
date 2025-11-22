@@ -15,6 +15,7 @@ import TestYourCants from './TestYourCants'
 import CantLose from './CantLose'
 import RiskReward from './RiskReward'
 import RiskReward2 from './RiskReward2'
+import WellnessRisk from './WellnessRisk'
 import ProsCons from './ProsCons'
 
 const pages = [
@@ -35,6 +36,7 @@ const pages = [
   { path: '/cantlose', label: "Can't Lose System", component: CantLose },
   { path: '/riskreward', label: 'Risk-Reward Calculation', component: RiskReward },
   { path: '/riskreward2', label: 'Risk-Reward Calculator v2', component: RiskReward2 },
+  { path: '/wellnessrisk', label: 'Wellness Risk-Reward', component: WellnessRisk },
   { path: '/proscons', label: 'Pros & Cons Analysis', component: ProsCons },
 ]
 
