@@ -1,5 +1,6 @@
 import Dashboard from './Dashboard'
 import DailySchedule from './DailySchedule'
+import DailyPlanner from './DailyPlanner'
 import Antiprocrastination from './Antiprocrastination'
 import DysfunctionalThoughts from './DysfunctionalThoughts'
 import PleasurePrediction from './PleasurePrediction'
@@ -21,6 +22,7 @@ import ProsCons from './ProsCons'
 const pages = [
   { path: '/', label: 'Dashboard', component: Dashboard },
   { path: '/daily', label: 'Daily Schedule', component: DailySchedule },
+  { path: '/planner', label: 'Daily Planner', component: DailyPlanner },
   { path: '/antiprocrastination', label: 'Antiprocrastination', component: Antiprocrastination },
   { path: '/dysfunctional', label: 'Dysfunctional Thoughts', component: DysfunctionalThoughts },
   { path: '/pleasure', label: 'Pleasure Prediction', component: PleasurePrediction },
